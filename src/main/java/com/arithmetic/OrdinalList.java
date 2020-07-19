@@ -1,32 +1,35 @@
 package com.arithmetic;
 
 /**
- * 实现一个顺序链表(固定长度)
- * 链表可以添加、移除、获取元素以及链表节点数量
+ * 实现一个顺序表(固定长度)
+ * 顺序表可以添加、移除、获取元素以及顺序表节点数量
+ * 优点:顺序存放,操作简单
+ * 缺点:插入和删除结点时,往往需要大量的移动数据;表数据过大,比较难分配足够的连续空间,
+ * 往往会导致内存分配失败,而无法存储
  */
 public class OrdinalList {
     /**
-     * 链表最多节点数
+     * 顺序表最多节点数
      */
     private static final int MAX_LENGTH = 100;
     /**
-     * 初始化链表(下标从0开始)
+     * 初始化顺序表(下标从0开始)
      */
     private Object[] list = new Object[MAX_LENGTH];
-    /**链表节点数量
-     *
+    /**
+     * 顺序表节点数量
      */
     private int size;
 
     /**
-     * 获取链表节点个数
+     * 获取顺序表节点个数
      */
     public int size(){
         return size;
     }
 
     /**
-     * 是否为空链表
+     * 是否为空顺序表
      */
     public boolean isEmpty(){
         return size == 0;
@@ -64,7 +67,7 @@ public class OrdinalList {
     }
 
     /**
-     * 获取指定位置链表中元素
+     * 获取指定位置顺序表中元素
      */
     public Object getElement(int index){
         if(index < 0 || index > (size - 1)){
@@ -94,7 +97,7 @@ public class OrdinalList {
     }
 
     /**
-     * 清空链表
+     * 清空顺序表
      */
     public void clear(){
         for(int i = 0; i < size; i++){
@@ -104,7 +107,7 @@ public class OrdinalList {
     }
 
     /**
-     * 打印链表中所有元素
+     * 打印顺序表中所有元素
      */
     public String toString(){
         StringBuffer sb = new StringBuffer();

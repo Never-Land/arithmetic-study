@@ -1,7 +1,7 @@
 package com.arithmetic;
 
 /**
- * 顺序链表测试类
+ * 顺序表测试类
  */
 public class OrdinalListTest {
     public static void main(String[] args) {
